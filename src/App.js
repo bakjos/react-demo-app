@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import "./App.css";
+import ToastProvider from "./components/toast";
+import Routes from "./routes";
+
+const theme = {
+  default: {
+    primaryColor: "#66615B",
+    secondaryColor: "#9A9A9A",
+    lightColor: "#F2F2F2",
+    buttonBackgroud: "#7AC29A",
+    titleSize: "20px",
+    subtitleSize: "14px",
+  },
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme.default}>
+        <Router>
+          <ToastProvider>
+            <Routes />
+          </ToastProvider>
+        </Router>
+      </ThemeProvider>
     </div>
   );
 }
