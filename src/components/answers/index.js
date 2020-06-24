@@ -81,13 +81,6 @@ const Label = styled.label`
 const RadioButtonWrapper = ({ answer, selectedAnswer, onAnswerSelected }) => {
   let additionalProps = {};
 
-  if (selectedAnswer !== undefined) {
-    additionalProps = {
-      ...additionalProps,
-      checked: answer.id === selectedAnswer,
-    };
-  }
-
   if (onAnswerSelected !== undefined) {
     additionalProps = {
       ...additionalProps,
@@ -96,6 +89,13 @@ const RadioButtonWrapper = ({ answer, selectedAnswer, onAnswerSelected }) => {
           onAnswerSelected(e.target.value);
         }
       },
+    };
+  }
+
+  if (selectedAnswer !== undefined || onAnswerSelected !== undefined) {
+    additionalProps = {
+      ...additionalProps,
+      checked: answer.id === selectedAnswer,
     };
   }
 

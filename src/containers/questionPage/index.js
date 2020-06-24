@@ -97,8 +97,6 @@ const QuestionPage = React.forwardRef((_, ref) => {
     return <Redirect to="/thank-you" />;
   }
 
-  console.log("Rendering");
-
   return (
     <Panel ref={ref}>
       {!questions.items || questions.loading || questions.error ? (
