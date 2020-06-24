@@ -1,7 +1,7 @@
-import { createStore, applyMiddleware, compose } from "redux";
+import sagaMonitor from "@redux-saga/simple-saga-monitor";
+import { applyMiddleware, compose, createStore } from "redux";
 import { createLogger } from "redux-logger";
 import createSagaMiddleware, { END } from "redux-saga";
-import sagaMonitor from "@redux-saga/simple-saga-monitor";
 import rootReducer from "../reducers";
 
 export default function configureStore(initialState) {

@@ -1,10 +1,9 @@
-import React, { useContext, useRef, useCallback, useReducer } from "react";
+import React, { useCallback, useContext, useReducer, useRef } from "react";
 import { createPortal } from "react-dom";
-import styled from "styled-components";
 import { Transition } from "react-transition-group";
-
-import Toast from "./toast";
+import styled from "styled-components";
 import { ToastContext } from ".";
+import Toast from "./toast";
 
 const Wrapper = styled.div`
   position: absolute;

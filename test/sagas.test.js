@@ -1,8 +1,8 @@
 import { runSaga } from "redux-saga";
-import { put, call, select } from "redux-saga/effects";
-import { getAllQuestions, postAnswers } from "../src/sagas";
-import { api } from "../src/services";
+import { call, put } from "redux-saga/effects";
 import * as actions from "../src/actions";
+import { getAllQuestions } from "../src/sagas";
+import { api } from "../src/services";
 
 const questions = [
   {

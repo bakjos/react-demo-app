@@ -1,9 +1,8 @@
 import configureMockStore from "redux-mock-store";
 import createSagaMiddleware from "redux-saga";
+import * as actions from "../src/actions";
 import rootSaga from "../src/sagas";
 import { api } from "../src/services";
-
-import * as actions from "../src/actions";
 
 const delay = (t) => new Promise((res) => setTimeout(() => res(), t));
 

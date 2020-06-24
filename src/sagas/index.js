@@ -1,16 +1,16 @@
 import {
-  takeEvery,
-  delay,
-  put,
-  call,
-  fork,
-  select,
   all,
+  call,
+  delay,
+  fork,
+  put,
+  select,
+  takeEvery,
   takeLatest,
 } from "redux-saga/effects";
-import { api } from "../services";
 import * as actions from "../actions";
 import { getAnswerMap, getQuestions } from "../reducers";
+import { api } from "../services";
 
 export function* getAllQuestions() {
   const questions = yield call(api.getQuestions);

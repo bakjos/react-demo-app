@@ -4,7 +4,6 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 import QuestionPage from "./containers/questionPage";
 import ThankYouPage from "./containers/thankyouPage";
-import ToastProvider from "./components/toast";
 
 const Wrapper = styled.div`
   .fade-enter {
@@ -47,16 +46,14 @@ function Container({ location }) {
           timeout={{ enter: 600, exit: 600 }}
           nodeRef={getOrCreateChildRef(location.key)}
         >
-          <ToastProvider>
-            <Switch location={location}>
-              <Route path="/thank-you">
-                <ThankYouPage ref={getOrCreateChildRef(location.key)} />
-              </Route>
-              <Route path="/">
-                <QuestionPage ref={getOrCreateChildRef(location.key)} />
-              </Route>
-            </Switch>
-          </ToastProvider>
+          <Switch location={location}>
+            <Route path="/thank-you">
+              <ThankYouPage ref={getOrCreateChildRef(location.key)} />
+            </Route>
+            <Route path="/">
+              <QuestionPage ref={getOrCreateChildRef(location.key)} />
+            </Route>
+          </Switch>
         </CSSTransition>
       </TransitionGroup>
     </Wrapper>

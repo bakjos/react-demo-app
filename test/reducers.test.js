@@ -1,6 +1,6 @@
 import * as actions from "../src/actions";
-import { questionsReducer } from "../src/reducers";
 import { receiveQuestions } from "../src/actions";
+import { questionsReducer } from "../src/reducers";
 
 const questions = [
   {

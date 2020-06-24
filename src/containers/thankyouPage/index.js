@@ -1,13 +1,12 @@
-import React from "react";
-import Panel from "../../components/panel";
-import { useSelector } from "react-redux";
-import { getAnswers } from "../../reducers";
-import { Redirect } from "react-router-dom";
-import IconPanel from "../../components/iconPanel";
-import styled from "styled-components";
-
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import { useSelector } from "react-redux";
+import { Redirect } from "react-router-dom";
+import styled from "styled-components";
+import IconPanel from "../../components/iconPanel";
+import Panel from "../../components/panel";
+import { getAnswers } from "../../reducers";
 
 const InformationIcon = styled(FontAwesomeIcon).attrs({
   icon: faInfoCircle,

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { cleanup, render, fireEvent, screen } from "@testing-library/react";
-import Answers from "../src/components/answers";
-
 import "@testing-library/jest-dom/extend-expect";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import React, { useState } from "react";
+import Answers from "../src/components/answers";
 
 const answers = [
   { id: 0, text: "This is a test" },

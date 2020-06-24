@@ -10,6 +10,7 @@ const ExclamationIcon = styled(FontAwesomeIcon).attrs({
   width: 70px;
   height: 70px;
   color: ${({ theme }) => theme.primaryColor};
+  margin: auto;
 `;
 
 const ErrorPanel = ({ title }) => {

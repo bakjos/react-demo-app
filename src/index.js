@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-
 import { Provider } from "react-redux";
-import configureStore from "./store";
+import App from "./App";
+import "./index.css";
 import rootSaga from "./sagas";
+import * as serviceWorker from "./serviceWorker";
+import configureStore from "./store";
+import ToastProvider from "./components/toast";
 
 const initialState = {};
 
@@ -16,7 +16,9 @@ store.runSaga(rootSaga);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ToastProvider>
+        <App />
+      </ToastProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
