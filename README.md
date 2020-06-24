@@ -1,10 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Data flow diagram
+
+![Kafka-operator architecture](docs/img/Redux-Saga.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -26,6 +30,12 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run server`
+
+Starts the server it requires the build folder before hand in order to display the application
+
+Open [http://localhost:5000](http://localhost:5000)
 
 ### `npm run eject`
 
